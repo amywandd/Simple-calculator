@@ -1,24 +1,24 @@
 # Amy Njeri Wanderi - sct211-0010/2021
-name = input("What is your name?")
-print("Welcome ", name)
-num1 = int(input("Enter the first number"))
-num2 = int(input("Enter the second number"))
-total = num1 + num2
-print("The addition of ", num1, "and ", num2, "is ", total)
-#Find out birth year
-birth_year = int(input("Which year were you born?"))
-#Finds current year
-current_year = int(input("What is the current year?"))
-#calculates age in terms of years
-age = current_year - birth_year
-#finds date user was born
-birth_date = int(input("Which date were you born?"))
-#finds current date
-current_date = int(input("What is the current date?"))
-#calculates age in term of dates
-if birth_date > current_date:
-    age - 1
-    print("You are", age, "years old", current_date, "days old")
-elif current_date > birth_date:
-    real_date = current_date - birth_date
-    print("You are", age , "years old", real_date, "days old")
+class Calculator:
+    def __init__(self):
+        pass
+    def add(self, x, y):
+        return print(f"Sum of {x} and {y} = {x + y}")
+    def subtract(self, x, y):
+        return print(f"Subtraction of {x} and {y} = {x - y}")
+    def multiply(self, x, y):
+        return print(f"Multiplication of {x} and {y} = {x * y}")
+    def division(self, x, y):
+        return print(f"Division of {x} and {y} = {x / y}")
+calculator1 = calculator()
+num1 = int(input("Enter first number: "))
+num2 = int(input("Enter second number: "))
+operation = input("____________Enter operation____________\n Enter(1,2,3 or 4)\n1.Adition\n2.Subtraction\n3.Multiplication\n4.Division.\n**************\n")
+if operation == "1":
+    calculator1.add(num1, num2)
+elif operation == "2":
+    calculator1.subtract(num1, num2)
+elif operation == "3":
+    calculator1.multiply(num1, num2)
+else:
+    calculator1.divide(num1, num2)
